@@ -1,0 +1,30 @@
+# BDH Linux — Package List
+# Arch/Manjaro only (pacman)
+
+# Python
+python
+python-pip
+python-virtualenv
+
+# Database
+postgresql
+pgadmin4
+
+# Dev Tools
+git
+docker
+docker-compose
+code
+neovim
+wget
+curl
+htop
+tree
+
+# Terminal
+zsh
+tmux
+
+# Network tools
+httpie
+net-toolss
