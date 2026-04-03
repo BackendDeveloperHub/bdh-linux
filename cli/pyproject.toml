@@ -24,7 +24,7 @@ dependencies = [
 ]
 
 [project.scripts]
-bdh-linux = "bdh_linux.main:app"
+bdh-linux = "bdh-linux.main:app"
 
 [project.urls]
 Homepage = "https://github.com/BackendDeveloperHub/bdh-linux"
