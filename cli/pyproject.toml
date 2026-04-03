@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "bdh-linux"
-version = "v1.0.0"
+version = "0.0.0"
 description = "bdh-linux — Backend Developer OS setup tool for Arch/Manjaro"
 readme = "README.md"
 license = {text = "MIT"}
