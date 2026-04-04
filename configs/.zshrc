@@ -18,3 +18,4 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # Editor
 export EDITOR="code"
+source ~/.bdh-linux/configs/.zshrc
