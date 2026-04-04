@@ -6,14 +6,12 @@
 echo "⚡ Welcome to bdh-linux Setup!"
 echo "================================"
 
-# Get script location
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-ROOT_DIR="$(dirname "$SCRIPT_DIR")"
+BASE_URL="https://raw.githubusercontent.com/BackendDeveloperHub/bdh-linux/main"
 
 # Step 1 — ZSH setup
 echo "🔧 Setting up ZSH..."
 sudo pacman -S --noconfirm zsh
-chsh -s /bin/zsh
+chsh -s /bin/zsh $USER
 
 # Step 2 — Oh My Zsh
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
@@ -25,15 +23,16 @@ fi
 
 # Step 3 — Copy BDH configs
 echo "🔧 Applying BDH configs..."
-cp "$ROOT_DIR/configs/.zshrc" ~/.zshrc
-cp "$ROOT_DIR/configs/aliases.sh" ~/.aliases.sh
+curl -fsSL "$BASE_URL/configs/.zshrc" -o ~/.zshrc
+curl -fsSL "$BASE_URL/configs/aliases.sh" -o ~/.aliases.sh
 
 # Step 4 — Install packages
 echo "🔧 Installing packages..."
-bash "$ROOT_DIR/scripts/install-packages.sh"
+curl -fsSL "$BASE_URL/scripts/install-packages.sh" -o /tmp/install-packages.sh
+bash /tmp/install-packages.sh
 
 # Step 5 — Done
 echo ""
 echo "✅ bdh-linux Setup Complete!"
 echo "================================"
-echo "⚡ Restart terminal to apply chan
+echo "⚡ Restart terminal to apply changes!"
