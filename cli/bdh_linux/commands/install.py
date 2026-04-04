@@ -19,7 +19,7 @@ def all():
     
     # Python packages
     print("[yellow]🐍 Installing Python packages...[/yellow]")
-    run("pip install fastapi uvicorn sqlalchemy psycopg2-binary python-dotenv bdh-fastapi-new")
+    run("pip install fastapi uvicorn sqlalchemy psycopg2-binary python-dotenv bdh-fastapi-new --break-system-packages")
     
     # Oh My Zsh
     print("[yellow]⚡ Installing Oh My Zsh...[/yellow]")
