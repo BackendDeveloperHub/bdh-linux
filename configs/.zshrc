@@ -1,11 +1,13 @@
 # Oh My Zsh
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="eval"$(pipx ensurepath"          # ← blank பண்ணு, PROMPT override work ஆகும்
+
+ZSH_THEME="robbyrussell"
+
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+
 source $ZSH/oh-my-zsh.sh
 
-# BDH Cyberpunk Prompt
-PROMPT='%F{cyan}⚡bdh-linux%f %F{green}%~%f $ '
+PROMPT="%F{cyan}⚡ praba⚡ %F{green}%~%f $ "
 
 
 # BDH Aliases
