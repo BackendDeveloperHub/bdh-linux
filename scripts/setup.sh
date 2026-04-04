@@ -1,38 +1,35 @@
 #!/bin/bash
 
-# BDH Linux — Full Setup Script
-# Run this after fresh Manjaro install
-
 echo "⚡ Welcome to bdh-linux Setup!"
 echo "================================"
 
 BASE_URL="https://raw.githubusercontent.com/BackendDeveloperHub/bdh-linux/main"
 
-# Step 1 — ZSH setup
+# Step 1 — ZSH
 echo "🔧 Setting up ZSH..."
 sudo pacman -S --noconfirm zsh
-sudo chsh -s /bin/zsh $USER
+sudo usermod -s /bin/zsh $USER
 
 # Step 2 — Oh My Zsh
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
   echo "🔧 Installing Oh My Zsh..."
-  RUNZSH=no CHSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  git clone --depth=1 https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
+  cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 else
   echo "⚡ Oh My Zsh already exists, skipping..."
 fi
 
-# Step 3 — Copy BDH configs
+# Step 3 — BDH Configs
 echo "🔧 Applying BDH configs..."
 curl -fsSL "$BASE_URL/configs/.zshrc" -o ~/.zshrc
 curl -fsSL "$BASE_URL/configs/aliases.sh" -o ~/.aliases.sh
 
-# Step 4 — Install packages
+# Step 4 — Packages
 echo "🔧 Installing packages..."
 curl -fsSL "$BASE_URL/scripts/install-packages.sh" -o /tmp/install-packages.sh
 bash /tmp/install-packages.sh
 
-# Step 5 — Done
 echo ""
 echo "✅ bdh-linux Setup Complete!"
 echo "================================"
-echo "⚡ Restart terminal to apply changes!"
+echo "⚡ Restart terminal to apply changes
