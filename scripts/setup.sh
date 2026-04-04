@@ -14,7 +14,7 @@ sudo usermod -s /bin/zsh $USER
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
   echo "🔧 Installing Oh My Zsh..."
   git clone --depth=1 https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
-  cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+
 else
   echo "⚡ Oh My Zsh already exists, skipping..."
 fi
