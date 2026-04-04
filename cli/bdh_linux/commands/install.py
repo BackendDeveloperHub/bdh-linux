@@ -27,8 +27,7 @@ def all():
     
     # BDH Configs
     print("[yellow]🔧 Applying BDH configs...[/yellow]")
-    run("cp ~/.bdh-linux/configs/.zshrc ~/.zshrc")
-    run("cp ~/.bdh-linux/configs/aliases.sh ~/.aliases.sh")
+    run("cp ~/.config/bdh-linux/configs/.zshrc ~/.zshrc")
     
     print("")
     print("[green]✅ bdh-linux installed![/green]")
