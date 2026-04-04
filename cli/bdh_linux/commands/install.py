@@ -44,7 +44,7 @@ def minimal():
     run("sudo pacman -S --noconfirm python python-pip git zsh curl wget")
     
     print("[yellow]🐍 Installing Python packages...[/yellow]")
-    run("pip install fastapi uvicorn bdh-fastapi-new")
+    run("pip install fastapi uvicorn bdh-fastapi-new --break-system-packages")
     
     print("")
     print("[green]✅ Minimal install done![/green]")
