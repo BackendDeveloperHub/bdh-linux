@@ -16,9 +16,9 @@ chsh -s /bin/zsh $USER
 # Step 2 — Oh My Zsh
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
   echo "🔧 Installing Oh My Zsh..."
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+  RUNZSH=no CHSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 else
-  echo "⚡ Oh My Zsh already installed, skipping..."
+  echo "⚡ Oh My Zsh already exists, skipping..."
 fi
 
 # Step 3 — Copy BDH configs
