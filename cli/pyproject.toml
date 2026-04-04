@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bdh-linux"
+version = "v1.0.3"
+description = "bdh-linux — Backend Developer OS setup tool for Arch/Manjaro"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Prabakaran", email = "prabakaran20020430@gmail.com"}
+]
+keywords = ["linux", "backend", "developer", "fastapi", "arch", "manjaro"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "typer",
+    "rich",
+]
+
+[project.scripts]
+bdh-linux = "bdh_linux.main:app"
+
+[project.urls]
+Homepage = "https://github.com/BackendDeveloperHub/bdh-linux"
+Repository = "https://github.com/BackendDeveloperHub/bdh-linux"
