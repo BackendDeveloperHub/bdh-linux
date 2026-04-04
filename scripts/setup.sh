@@ -11,7 +11,7 @@ BASE_URL="https://raw.githubusercontent.com/BackendDeveloperHub/bdh-linux/main"
 # Step 1 — ZSH setup
 echo "🔧 Setting up ZSH..."
 sudo pacman -S --noconfirm zsh
-chsh -s /bin/zsh $USER
+sudo chsh -s /bin/zsh $USER
 
 # Step 2 — Oh My Zsh
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
