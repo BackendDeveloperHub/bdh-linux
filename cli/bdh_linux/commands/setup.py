@@ -32,22 +32,22 @@ def terminal():
        
     # Powerlevel10k
     if not os.path.isdir(os.path.expanduser("~/.oh-my-zsh/custom/themes/powerlevel10k"))
-        run("git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k")
+         run("git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k")
     else:
-        print("[yellow]⚡ Powerlevel10k already exists, skipping...[/yellow]")
+         print("[yellow]⚡ Powerlevel10k already exists, skipping...[/yellow]")
 
 # zsh-autosuggestions
     if not os.path.isdir(os.path.expanduser("~/.oh-my-zsh/custom/plugins/zsh-autosuggestions")):
-        run("git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions.git ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions")
+         run("git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions.git ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions")
     else:
-        print("[yellow]⚡ zsh-autosuggestions already exists, skipping...[/yellow]")
+         print("[yellow]⚡ zsh-autosuggestions already exists, skipping...[/yellow]")
 
 # zsh-syntax-highlighting
-    if not os.path.isdir(os.path.expanduser("~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting")):
-        run("git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting")
-    else:
-        print("[yellow]⚡ zsh-syntax-highlighting already exists, skipping...[/yellow]")
-    
+     if not os.path.isdir(os.path.expanduser("~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting")):
+         run("git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting")
+     else:
+         print("[yellow]⚡ zsh-syntax-highlighting already exists, skipping...[/yellow]")
+     
 
     # Plugins
     if not os.path.isdir(os.path.expanduser("~/.oh-my-zsh/custom/plugins/zsh-autosuggestions")):
