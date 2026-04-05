@@ -32,7 +32,7 @@ def terminal():
        
     # Powerlevel10k
     if not os.path.isdir(os.path.expanduser("~/.oh-my-zsh/custom/themes/powerlevel10k"))
-         run("git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k")
+         run("git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k"):
     else:
          print("[yellow]⚡ Powerlevel10k already exists, skipping...[/yellow]")
 
