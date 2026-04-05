@@ -1,21 +1,29 @@
+# Enable Powerlevel10k instant prompt
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Oh My Zsh
 export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
-ZSH_THEME="robbyrussell"
-
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+# Plugins
+plugins=(
+  git
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+)
 
 source $ZSH/oh-my-zsh.sh
 
-PROMPT="%F{cyan}⚡ praba⚡ %F{green}%~%f $ "
-
+# Powerlevel10k config
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
 # BDH Aliases
 [ -f ~/.aliases.sh ] && source ~/.aliases.sh
 
-# Python
+# Python / pipx
 export PATH="$HOME/.local/bin:$PATH"
 
 # Editor
 export EDITOR="code"
-source ~/.bdh-linux/configs/.zshrc
