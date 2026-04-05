@@ -16,13 +16,13 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# Powerlevel10k config
+# Powerlevel10k
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
 # BDH Aliases
 [ -f ~/.aliases.sh ] && source ~/.aliases.sh
 
-# Python / pipx
+# Python / pipx PATH
 export PATH="$HOME/.local/bin:$PATH"
 
 # Editor
