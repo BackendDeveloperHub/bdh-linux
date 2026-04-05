@@ -1,5 +1,6 @@
 import typer
 from rich import print
+from importlib.metadata import version as get_version
 from bdh_linux.commands import install, setup, remove
 
 app = typer.Typer(
@@ -7,7 +8,6 @@ app = typer.Typer(
     help="⚡ BDH Linux — Backend Developer OS setup tool",
 )
 
-# Sub commands
 app.add_typer(install.app, name="install")
 app.add_typer(setup.app, name="setup")
 app.add_typer(remove.app, name="remove")
@@ -15,7 +15,8 @@ app.add_typer(remove.app, name="remove")
 @app.command()
 def version():
     """Show BDH Linux version"""
-    print("[cyan]⚡ bdh-linux v1.0.0[/cyan]")
+    v = get_version("bdh-linux")
+    print(f"[cyan]⚡ bdh-linux v{v}[/cyan]")
     print("[green]Backend Developer OS — Arch/Manjaro[/green]")
 
 @app.command()
