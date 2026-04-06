@@ -43,9 +43,9 @@ def terminal():
          print("[yellow]⚡ zsh-autosuggestions already exists, skipping...[/yellow]")
 
 # zsh-syntax-highlighting
-     if not os.path.isdir(os.path.expanduser("~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting")):
+    if not os.path.isdir(os.path.expanduser("~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting")):
          run("git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting")
-     else:
+    else:
          print("[yellow]⚡ zsh-syntax-highlighting already exists, skipping...[/yellow]")
      
 
