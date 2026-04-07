@@ -7,10 +7,11 @@ name = "bdh-linux"
 version = "v4.0.3"
 description = "bdh-linux — Backend Developer OS setup tool for Arch/Manjaro"
 readme = "README.md"
-license = {text = "MIT"}
 authors = [
-    {name = "Prabakaran", email = "prabakaran20020430@gmail.com"}
+  { name = "Prabakaran", email = "prabakaran20020430@gmail.com" }
 ]
+license = {text = "MIT"}
+
 keywords = ["linux", "backend", "developer", "fastapi", "arch", "manjaro"]
 classifiers = [
     "Programming Language :: Python :: 3",
