@@ -30,3 +30,4 @@ bdh-linux = "bdh_linux.main:app"
 [project.urls]
 Homepage = "https://github.com/BackendDeveloperHub/bdh-linux"
 Repository = "https://github.com/BackendDeveloperHub/bdh-linux"
+author="BackendDeveloperHub"
