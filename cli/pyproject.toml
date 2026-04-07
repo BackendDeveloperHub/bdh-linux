@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "bdh-linux"
-version = "v4.1.2"
+version = "v4.2.0"
 description = "bdh-linux — Backend Developer OS setup tool for Arch/Manjaro"
 readme = "README.md"
 authors = [
@@ -30,4 +30,3 @@ bdh-linux = "bdh_linux.main:app"
 [project.urls]
 Homepage = "https://github.com/BackendDeveloperHub/bdh-linux"
 Repository = "https://github.com/BackendDeveloperHub/bdh-linux"
-author="BackendDeveloperHub"
