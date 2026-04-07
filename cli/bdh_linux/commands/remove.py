@@ -45,4 +45,5 @@ def media():
     """Remove media apps"""
     print("[yellow]🗑️ Removing media apps...[/yellow]")
     run("sudo pacman -Rns --noconfirm vlc rhythmbox shotwell transmission-gtk thunderbird 2>/dev/null")
-    print("[green]✅ Media apps removed!")
+
+   
