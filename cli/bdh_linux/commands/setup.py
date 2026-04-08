@@ -68,6 +68,7 @@ def terminal():
     print("[green]✅ Terminal setup done![/green]")
     print("[green]💡 Run 'p10k configure' to customize prompt![/green]")
     print("[green]⚡ Restart terminal to apply![/green]")
+    reset
 
 @app.command()
 def packages():
