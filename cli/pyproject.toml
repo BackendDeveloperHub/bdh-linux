@@ -7,7 +7,7 @@ name = "bdh-linux"
 version = "v4.2.3"
 description = "bdh-linux — Backend Developer OS setup tool for Arch/Manjaro"
 readme = "README.md"
-authors = [
+author = [
   { name = "Prabakaran", email = "prabakaran20020430@gmail.com" }
 ]
 license = {text = "MIT"}
