@@ -52,4 +52,4 @@ def cleanup():
     """ remove cache and orphaned packages..."""
     subprocess.run("[sudo pacman -Rns $(pacman -Qtdq) --noconfirm || true]")
    subprocess.run("[sudo pacman -Sc --noconfirm]")
-    print("✅ System Cleaned successfully!")
+    print("[green]✅ System Cleaned successfully![/green]")
