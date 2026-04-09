@@ -51,5 +51,5 @@ def media():
 def cleanup():
     """ remove cache and orphaned packages..."""
     run("sudo pacman -Rns $(pacman -Qtdq) --noconfirm || true")
-    run(["sudo pacman -Sc --noconfirm")
+    run("sudo pacman -Sc --noconfirm")
     print("[green]✅ System Cleaned successfully![/green]")
