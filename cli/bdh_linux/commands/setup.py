@@ -104,3 +104,4 @@ def docker():
     run("sudo usermod -aG docker $USER")
     print("")
     print("[green]✅ Docker setup done![/green]")
+reset
