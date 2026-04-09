@@ -4,10 +4,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "bdh-linux"
-version = "v4.2.3"
+version = "v4.2.4"
 description = "bdh-linux — Backend Developer OS setup tool for Arch/Manjaro"
 readme = "README.md"
-author = [{ name = "Prabakaran", email = "prabakaran20020430@gmail.com" }]
+author = "backendDeveloperHub"
 license = {text = "MIT"}
 
 keywords = ["linux", "backend", "developer", "fastapi", "arch", "manjaro"]
