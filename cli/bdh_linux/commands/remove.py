@@ -1,7 +1,6 @@
 import typer
 import subprocess
 from rich import print
-import os
 
 app = typer.Typer(help="Remove bloatware from system")
 
@@ -51,6 +50,6 @@ def media():
 @app.command()
 def cleanup():
     """ remove cache and orphaned packages..."""
-    os.system("sudo pacman -Rns $(pacman -Qtdq) --noconfirm || true")
-    os.system("sudo pacman -Sc --noconfirm")
+    subprocess.run("sudo pacman -Rns $(pacman -Qtdq) --noconfirm || true")
+   subprocess.run("sudo pacman -Sc --noconfirm")
     print("✅ System Cleaned successfully!")
