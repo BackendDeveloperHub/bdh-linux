@@ -6,7 +6,8 @@ python
 python-pip
 python-virtualenv
 fastapi[standard]
-bdh-fastapi-new
+python-pillow
+tk
 
 # Database
 postgresql
