@@ -47,6 +47,12 @@ curl -fsSL "$BASE_URL/configs/aliases.sh" -o ~/.aliases.sh
 echo "🔧 Installing packages..."
 curl -fsSL "$BASE_URL/scripts/install-packages.sh" -o /tmp/install-packages.sh
 bash /tmp/install-packages.sh
+# scripts/setup.sh - la ithai add pannunga
+echo "Checking Internet Connection..."
+if ! ping -c 1 google.com &> /dev/null; then
+    echo "Internet illai! Network Link process-a start pandraen..."
+    # Inga namma munnadi discuss panna nmcli logic-a call pannanum
+fi
 
 echo ""
 echo "✅ bdh-linux Setup Complete!"
