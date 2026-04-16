@@ -142,7 +142,7 @@ def network():
 
     print(f"[yellow]⚡ Connecting to {ssid}...[/yellow]")
     # nmcli moolama connect pandroom
-    result = subprocess.run(f'nmcli device wifi connect "{$ssid}" password "{$password}"', shell=True)
+    result = subprocess.run(f'nmcli device wifi connect "{ssid}" password "{password}"', shell=True)
 
     if result.returncode == 0:
         print(f"[green]✅ Successfully connected to {ssid}![/green]")
