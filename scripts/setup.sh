@@ -1,5 +1,6 @@
 #!/bin/bash
 
+: <<'COMMENT'
 //echo "⚡ Welcome to bdh-linux Setup!"
 echo "================================"
 
@@ -60,6 +61,7 @@ echo "================================"
 echo "⚡ Restart terminal to apply changes!"
 echo "💡 Run 'p10k configure' to customize your prompt!"
 //
+COMMENT
 #!/bin/bash
 
 echo "⚡ Welcome to bdh-linux Setup!"
