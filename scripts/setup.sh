@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "⚡ Welcome to bdh-linux Setup!"
+//echo "⚡ Welcome to bdh-linux Setup!"
 echo "================================"
 
 BASE_URL="https://raw.githubusercontent.com/BackendDeveloperHub/bdh-linux/main"
@@ -59,3 +59,44 @@ echo "✅ bdh-linux Setup Complete!"
 echo "================================"
 echo "⚡ Restart terminal to apply changes!"
 echo "💡 Run 'p10k configure' to customize your prompt!"
+//
+#!/bin/bash
+
+echo "⚡ Welcome to bdh-linux Setup!"
+echo "================================"
+
+BASE_URL="https://raw.githubusercontent.com/BackendDeveloperHub/bdh-linux/main"
+
+# --- STEP 0: Internet Check & Network Link ---
+echo "🔍 Checking Internet Connection..."
+if ! ping -c 1 google.com &> /dev/null; then
+    echo "⚠️ Internet illai! Network Link process-a start pandraen..."
+    
+    # NetworkManager active-ah irukkannu check pannurom
+    sudo systemctl enable --now NetworkManager &> /dev/null
+
+    echo "🔭 Scanning for Wi-Fi networks..."
+    nmcli device wifi rescan
+    nmcli -f SSID,BARS,SECURITY device wifi list
+    
+    echo "--------------------------------"
+    read -p "Select panna Wi-Fi Name (SSID): " ssid
+    read -s -p "Wi-Fi Password: " password
+    echo ""
+    
+    echo "⚡ Connecting to $ssid..."
+    nmcli device wifi connect "$ssid" password "$password"
+    
+    # Thirumba check pannurom
+    if ! ping -c 1 google.com &> /dev/null; then
+        echo "❌ Connection fail aayiduchi! Internet illama setup thodara mudiyathu."
+        exit 1
+    fi
+    echo "✅ Internet Connected! Setup thodaruthu..."
+fi
+# ---------------------------------------------
+
+# Step 1 — ZSH
+echo "🔧 Setting up ZSH..."
+sudo pacman -S --noconfirm zsh git curl
+# ... (matha steps ellam appadiyae thodarum)
