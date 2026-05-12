@@ -15,7 +15,7 @@ def all():
     
     # Packages
     print("[yellow]📦 Installing packages...[/yellow]")
-    run("sudo pacman -S --noconfirm python python-pip git docker zsh neovim curl wget htop tree tmux")
+    run("sudo pacman -S --noconfirm python python-pip git docker ranger zsh neovim curl wget htop tree tmux")
     
     # Python packages
     print("[yellow]🐍 Installing Python packages...[/yellow]")
