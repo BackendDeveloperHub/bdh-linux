@@ -8,6 +8,7 @@ python-virtualenv
 python-fastapi
 python-pillow
 tk
+ranger
 
 # Database
 postgresql
