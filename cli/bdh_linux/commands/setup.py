@@ -245,6 +245,7 @@ def docker():
     run("sudo systemctl start docker")
     run("sudo usermod -aG docker $USER")
     print("")
+    print("[green]✅ Docker setup done![/green]")
 @app.command()
 def keyboard_backlight():
     run("echo 3 | sudo tee /sys/class/leds/dell::kbd_backlight/brightness")
@@ -258,5 +259,10 @@ def keyboard_backlight():
 
 
     
-    print("[green]✅ Docker setup done![/green]")
+    
+
+
+
+
+
 
