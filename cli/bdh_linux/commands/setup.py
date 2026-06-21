@@ -248,11 +248,12 @@ def docker():
     print("[green]✅ Docker setup done![/green]")
 @app.command()
 def keyboard_backlight():
-    run("echo 3 | sudo tee /sys/class/leds/dell::kbd_backlight/brightness")
-
-
-
-
+    your_labtop =str(input("dell,asus,acer,msi,lenovo,hp"))
+    level = int(input("brightness leval(0-3):"))
+    if 0 <= level <=3 :
+        run(f"echo {level} | sudo tee /sys/class/leds/{ your_labtop}::kbd_backlight/brightness")
+    else:
+        print ("invalid input ")
 
 
 
