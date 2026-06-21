@@ -245,5 +245,18 @@ def docker():
     run("sudo systemctl start docker")
     run("sudo usermod -aG docker $USER")
     print("")
+@app.command()
+def keyboard_backlight():
+    run("echo 3 | sudo tee /sys/class/leds/dell::kbd_backlight/brightness")
+
+
+
+
+
+
+
+
+
+    
     print("[green]✅ Docker setup done![/green]")
 
