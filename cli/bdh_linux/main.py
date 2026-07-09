@@ -1,7 +1,7 @@
 import typer
 from rich import print
 from importlib.metadata import version as get_version
-from bdh_linux.commands import install, setup, remove,tamizhi_lib
+from bdh_linux.commands import install, setup, remove#tamizhi_lib
 
 app = typer.Typer(
     name="bdh-linux",
