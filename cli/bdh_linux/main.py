@@ -11,7 +11,7 @@ app = typer.Typer(
 app.add_typer(install.app, name="install")
 app.add_typer(setup.app, name="setup")
 app.add_typer(remove.app, name="remove")
-app.add_typer(tamizhi_lib.app, name="tamizhi")
+#app.add_typer(tamizhi_lib.app, name="tamizhi")
 @app.command()
 def version():
     """Show BDH Linux version"""
