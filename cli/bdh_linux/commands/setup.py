@@ -85,11 +85,13 @@ def git():
     """Setup Git global config"""
     print("[cyan]⚡ Setting up Git...[/cyan]")
     print("=" * 30)
-    name = typer.prompt("Your name")
-    email = typer.prompt("Your email")
-    run(f'git config --global user.name "{name}"')
-    run(f'git config --global user.email "{email}"')
-    run("git config --global init.defaultBranch main")
+    #name = typer.prompt("Your name")
+    #email = typer.prompt("Your email")
+    run(f'sudo pacman -S gh ')
+    run(f'gh auth login')
+    #run(f'git config --global user.name "{name}"')
+    #run(f'git config --global user.email "{email}"')
+    #run("git config --global init.defaultBranch main")
     print("")
     print("[green]✅ Git setup done![/green]")
 
