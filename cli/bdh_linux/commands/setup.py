@@ -125,7 +125,7 @@ def git():
     run(f'git config --global user.name "{name}"')
     run(f'git config --global user.email "{Token}"')
     run("git config --global init.defaultBranch main")'''
-    run(f'sudo pacman -S gh ')
+    run(f'sudo pacman -S github-cli')
     run(f'gh auth login')
     print("")
     print("[green]✅ Git setup done![/green]")
