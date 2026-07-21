@@ -1,6 +1,6 @@
 # Maintainer: Prabakaran <prabakaranorganisation@gmail.com>
 pkgname=bdh-linux
-pkgver=4.2.0
+pkgver=v6.0.1
 pkgrel=1
 pkgdesc="Backend developer environment provisioning CLI for Arch/Manjaro"
 arch=('any')
